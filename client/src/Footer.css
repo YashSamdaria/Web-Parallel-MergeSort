@@ -1,0 +1,42 @@
+/* Footer.css */
+.footer {
+    background: #dce1f3;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    padding: 15px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .footer-text {
+    font-size: 1rem;
+  }
+  
+  .footer-links {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .flat-button {
+    background: none;
+    border: none;
+    color: #b2fefa;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: color 0.3s ease;
+    text-decoration: none;
+    padding: 5px 10px;
+  }
+  
+  .flat-button:hover {
+    color: #ff6f61;
+  }
+  
+
+  *{
+    font-family: "Raleway", sans-serif;
+  }

@@ -1,0 +1,66 @@
+.demo {
+    background: linear-gradient(135deg, #1a2a6c, #2b4a9b);
+    color: white;
+    padding: 50px 20px;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .demo-container {
+    max-width: 600px;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  }
+  
+  .demo-title {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    font-weight: bold;
+  }
+  
+  .run-button {
+    background: #ff6f61;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    border-radius: 6px;
+    transition: background 0.3s ease;
+  }
+  
+  .run-button:hover {
+    background: #e65b50;
+  }
+  
+  .run-button:disabled {
+    background: #888;
+    cursor: not-allowed;
+  }
+  
+  .demo-results {
+    margin-top: 20px;
+    font-size: 1.2rem;
+    background: rgba(255, 255, 255, 0.2);
+    padding: 15px;
+    border-radius: 8px;
+  }
+  
+  .demo-results p {
+    margin: 10px 0;
+  }
+  
+  .demo-results span {
+    font-weight: bold;
+    color: #b2fefa;
+  }
+  
+  *{
+    font-family: "Raleway", sans-serif;
+  }

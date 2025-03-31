@@ -1,0 +1,36 @@
+.header {
+  background: linear-gradient(135deg, #1a2a6c, #2b4a9b);
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+  font-family: 'Arial', sans-serif;
+  position: relative;
+  overflow: hidden;
+}
+
+.thread {
+  position: absolute;
+  height: 2px;
+  width: 50%;
+  background: rgba(178, 254, 250, 0.5);
+  top: 30%;
+  z-index: 0;
+}
+
+.thread-2 { top: 70%; }
+
+.content-wrapper { position: relative; z-index: 1; padding: 20px; }
+.title { font-size: 3em; font-weight: bold; margin: 0; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); }
+.subtitle { font-size: 1.4em; margin-top: 20px; max-width: 800px; line-height: 1.6; }
+.underline { position: relative; display: inline-block; }
+.underline-line { position: absolute; bottom: -5px; left: 0; width: 100%; height: 3px; background-color: #b2fefa; display: block; }
+.scroll-button { margin-top: 40px; padding: 10px 20px; font-size: 1.2em; color: #b2fefa; background: transparent; border: 2px solid #b2fefa; border-radius: 25px; cursor: pointer; transition: background 0.3s ease; }
+.scroll-button:hover { background: rgba(178, 254, 250, 0.2); }
+
+*{
+  font-family: "Raleway", sans-serif;
+}

@@ -1,0 +1,36 @@
+# Node modules
+/client/node_modules/
+/client/.vite/
+/client/dist/
+
+# Vite build
+/client/vite.config.js
+/client/.env
+
+# React / build related
+/client/build/
+/client/.cache/
+
+# Python
+/server/__pycache__/
+/server/*.pyc
+/server/*.pyo
+/server/.env
+/server/venv/
+/server/.mypy_cache/
+/server/.tox/
+/server/.nox/
+/server/.coverage
+/server*.egg-info/
+
+# IDE / Editor folders
+/.idea/
+/.vscode/
+/*.iml
+
+# System Files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
