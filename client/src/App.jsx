@@ -1,10 +1,10 @@
 import './App.css'
 import React from "react";
-import Demo from './components/Demo'
 import Efficiency from './components/Efficiency'
 import Footer from './components/Footer'
 import Header from './components/Header'
 import Introduction from './components/Introduction'
+import RunSort from './components/RunSort';
 
 function App() {
 
@@ -13,7 +13,7 @@ function App() {
     <Header />
       <Introduction></Introduction>
       <Efficiency></Efficiency>
-      <Demo></Demo>
+      <RunSort></RunSort>
       <Footer></Footer>
     </>
   )
