@@ -1,4 +1,6 @@
-import React, { useState } from "react";
+// Remove this line
+// import React, { useState } from "react";
+import { useState } from "react"; // Only import what you need
 import { motion } from "framer-motion";
 import axios from "axios";
 import { ToastContainer, toast } from "react-toastify";
@@ -13,6 +15,7 @@ const Demo = () => {
 
   const handleRunDemo = async () => {
     setIsLoading(true);
+    console.log(BASE_URL);
     try {
       const response = await axios.post(`${BASE_URL}/sort`, {
         size: size,

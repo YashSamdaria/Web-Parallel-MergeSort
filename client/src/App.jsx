@@ -13,7 +13,7 @@ function App() {
     <Header />
       <Introduction></Introduction>
       <Efficiency></Efficiency>
-      {/* <Demo></Demo> */}
+      <Demo></Demo>
       <Footer></Footer>
     </>
   )
