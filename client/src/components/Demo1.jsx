@@ -1,11 +1,12 @@
 // Remove this line
 import React, { useState } from "react";
+import { useState } from "react"; // Only import what you need
 import { motion } from "framer-motion";
 import axios from "axios";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
-const Demo = () => {
+const Demo1 = () => {
   const [isLoading, setIsLoading] = useState(false);
   const [result, setResult] = useState(null);
   const [size, setSize] = useState(100);
@@ -131,4 +132,4 @@ const Demo = () => {
   );
 };
 
-export default Demo;
+export default Demo1;
