@@ -49,4 +49,5 @@ def sort():
         return jsonify({"error": str(e)}), 500
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    # Do not use app.run() for Gunicorn; Gunicorn will take over the server
+    pass
