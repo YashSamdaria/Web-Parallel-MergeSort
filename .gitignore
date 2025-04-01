@@ -35,4 +35,6 @@ Thumbs.db
 # Logs
 *.log
 
-.vscode
+# Other environment files (if applicable)
+Dockerfile
+.docker/
