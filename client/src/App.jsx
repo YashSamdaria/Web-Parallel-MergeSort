@@ -1,4 +1,5 @@
 import './App.css'
+import React from "react";
 import Demo from './components/Demo'
 import Efficiency from './components/Efficiency'
 import Footer from './components/Footer'
@@ -10,10 +11,10 @@ function App() {
   return (
     <>
     <Header />
-      <Introduction></Introduction>
+      {/* <Introduction></Introduction>
       <Efficiency></Efficiency>
       <Demo></Demo>
-      <Footer></Footer>
+      <Footer></Footer> */}
     </>
   )
 }
