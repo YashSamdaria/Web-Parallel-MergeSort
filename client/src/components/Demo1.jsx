@@ -68,7 +68,7 @@ const Demo1 = () => {
         </div>
 
         {/* Run Button */}
-        {/* <motion.button
+        <motion.button
           className={`bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-6 rounded-lg transition disabled:bg-gray-600 disabled:cursor-not-allowed`}
           onClick={handleRunDemo}
           whileHover={{ scale: 1.05 }}
@@ -76,10 +76,10 @@ const Demo1 = () => {
           disabled={isLoading}
         >
           {isLoading ? "Running..." : "Run Demo"}
-        </motion.button> */}
+        </motion.button>
 
         {/* Results */}
-        {/* {result && (
+        {result && (
           <div className="mt-6 p-4 bg-[#c2bfb6] shadow-lg rounded-lg">
             <h3 className="text-2xl font-semibold text-gray-800 mb-4">
               Sorting Performance Results
@@ -125,7 +125,7 @@ const Demo1 = () => {
               </tbody>
             </table>
           </div>
-        )} */}
+        )}
       </motion.div>
       <ToastContainer />
     </section>
