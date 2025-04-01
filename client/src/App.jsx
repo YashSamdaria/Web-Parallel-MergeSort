@@ -11,8 +11,8 @@ function App() {
   return (
     <>
     <Header />
-      {/* <Introduction></Introduction>
-      <Efficiency></Efficiency>
+      <Introduction></Introduction>
+      {/* <Efficiency></Efficiency>
       <Demo></Demo>
       <Footer></Footer> */}
     </>
