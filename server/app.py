@@ -12,13 +12,28 @@ EXECUTABLE_PATH = os.path.join(BASE_DIR, "sort", "main")
 
 # Precompile C++ code if needed
 def compile_cpp():
+    # Log the path for debugging
+    print(f"Checking if the executable exists at: {EXECUTABLE_PATH}")
+    
     if not os.path.exists(EXECUTABLE_PATH):  # Compile only if missing
+        print(f"Executable not found. Compiling C++ code...")
+        
+        # Run the g++ compile command
         compile_process = subprocess.run(
             ["g++", "sort/main.cpp", "sort/mergesort.cpp", "sort/parallelmergesort.cpp", "-o", EXECUTABLE_PATH],
             capture_output=True, text=True
         )
+        
         if compile_process.returncode != 0:
+            # Compilation failed, return stderr for debugging
+            print(f"Compilation failed. Error: {compile_process.stderr}")
             return False, compile_process.stderr
+        else:
+            print(f"Compilation successful. Executable created at {EXECUTABLE_PATH}")
+
+    else:
+        print(f"Executable already exists at {EXECUTABLE_PATH}")
+    
     return True, None
 
 @app.route("/")
@@ -29,8 +44,8 @@ def home():
 def sort():
     try:
         data = request.get_json()
-        size = str(data.get('size', 1000000))
-        order = data.get('order', 'random')
+        size = str(data.get('size', 1000000))  # Default size: 1 million
+        order = data.get('order', 'random')  # Default order: random
 
         # Compile if needed
         compiled, error_message = compile_cpp()
@@ -38,12 +53,16 @@ def sort():
             return jsonify({"error": "Compilation failed", "details": error_message}), 500
 
         # Run the C++ executable
+        print(f"Running executable at: {EXECUTABLE_PATH} with size {size} and order {order}")
+        
         result = subprocess.run(
             [EXECUTABLE_PATH, size, order],
             capture_output=True, text=True
         )
 
         if result.returncode != 0:
+            # Execution failed, return stderr for debugging
+            print(f"Execution failed. Error: {result.stderr}")
             return jsonify({"error": "Execution failed", "details": result.stderr}), 500
 
         # Parse output
@@ -57,6 +76,8 @@ def sort():
         })
 
     except Exception as e:
+        # Log the exception message
+        print(f"Exception occurred: {str(e)}")
         return jsonify({"error": str(e)}), 500
 
 # Render automatically runs Gunicorn, so no need to call app.run()
