@@ -12,9 +12,9 @@ function App() {
     <>
     <Header />
       <Introduction></Introduction>
-      {/* <Efficiency></Efficiency>
-      <Demo></Demo>
-      <Footer></Footer> */}
+      <Efficiency></Efficiency>
+      {/* <Demo></Demo> */}
+      <Footer></Footer>
     </>
   )
 }
