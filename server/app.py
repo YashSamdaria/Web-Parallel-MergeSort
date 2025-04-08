@@ -6,8 +6,8 @@ from flask_cors import CORS
 app = Flask(__name__)
 CORS(app)
 
-BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-EXECUTABLE_PATH = "main" # Points to the binary
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))  # /app/server
+EXECUTABLE_PATH = os.path.join(BASE_DIR, "main")       # /app/server/main
 print(BASE_DIR + "\n" + EXECUTABLE_PATH)
 
 @app.route("/")
