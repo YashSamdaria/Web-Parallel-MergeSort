@@ -12,9 +12,21 @@ print(BASE_DIR + "\n" + EXECUTABLE_PATH)
 
 @app.route("/")
 def home():
-    import os
     files = os.listdir(BASE_DIR)
-    return "Flask Backend Running on Railway!" + BASE_DIR + "\n" + EXECUTABLE_PATH + "\nFiles: " + str(files)
+
+    # Check if main exists and is executable
+    main_exists = os.path.exists(EXECUTABLE_PATH)
+    main_executable = os.access(EXECUTABLE_PATH, os.X_OK)
+
+    return (
+        "Flask Backend Running on Railway!\n"
+        + f"BASE_DIR: {BASE_DIR}\n"
+        + f"EXECUTABLE_PATH: {EXECUTABLE_PATH}\n"
+        + f"Files: {str(files)}\n"
+        + f"main exists: {main_exists}\n"
+        + f"main is executable: {main_executable}"
+    )
+
 
 
 @app.route("/sort", methods=['POST'])

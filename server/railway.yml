@@ -1,5 +1,6 @@
 build:
   commands:
-    - chmod +x server/main  # Make main executable in server/
+    - chmod +x main  # Make main executable in server/
+    - chmod +x server/main
 deploy:
   start: cd server && gunicorn app:app  # Run from server/
