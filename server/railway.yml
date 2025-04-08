@@ -1,6 +1,5 @@
 build:
   commands:
-    - chmod +x main  # Make main executable in server/
-    - chmod +x server/main
+    - chmod +x ../main        # Then set permissions
 deploy:
-  start: cd server && gunicorn app:app  # Run from server/
+  start: gunicorn server.app:app  # Run from root directory

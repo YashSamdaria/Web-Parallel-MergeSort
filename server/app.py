@@ -6,8 +6,8 @@ from flask_cors import CORS
 app = Flask(__name__)
 CORS(app)
 
-BASE_DIR = os.path.dirname(os.path.abspath(__file__))  # /app/server
-EXECUTABLE_PATH = os.path.join(BASE_DIR, "main")       # /app/server/main
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))  # New: /app
+EXECUTABLE_PATH = os.path.join(BASE_DIR, "main")                        # New: /app/main
 print(BASE_DIR + "\n" + EXECUTABLE_PATH)
 
 @app.route("/")
@@ -17,7 +17,7 @@ def home():
     # Check if main exists and is executable
     main_exists = os.path.exists(EXECUTABLE_PATH)
     main_executable = os.access(EXECUTABLE_PATH, os.X_OK)
-
+    root_files = os.listdir(BASE_DIR)
     return (
         "Flask Backend Running on Railway!\n"
         + f"BASE_DIR: {BASE_DIR}\n"
@@ -25,6 +25,8 @@ def home():
         + f"Files: {str(files)}\n"
         + f"main exists: {main_exists}\n"
         + f"main is executable: {main_executable}"
+        + f"\nRoot files: {root_files}"
+        + f"\nRoot main exists: {os.path.exists(EXECUTABLE_PATH)}"
     )
 
 
