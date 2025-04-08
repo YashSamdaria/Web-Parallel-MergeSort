@@ -8,10 +8,10 @@ CORS(app)
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 EXECUTABLE_PATH = os.path.join(BASE_DIR, "main")  # Points to the binary
-
+print(BASE_DIR + "\n" + EXECUTABLE_PATH)
 @app.route("/")
 def home():
-    return "Flask Backend Running on Railway!"
+    return "Flask Backend Running on Railway!" + BASE_DIR + "\n" + EXECUTABLE_PATH
 
 @app.route("/sort", methods=['POST'])
 def sort():
