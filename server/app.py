@@ -7,8 +7,8 @@ app = Flask(__name__)
 CORS(app)
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))  # New: /app
-EXECUTABLE_PATH = os.path.join(BASE_DIR, "main")                        # New: /app/main
-print(BASE_DIR + "\n" + EXECUTABLE_PATH)
+BASE_DIR = "/app"  # Hardcode for Railway environment
+EXECUTABLE_PATH = os.path.join(BASE_DIR, "main")
 
 @app.route("/")
 def home():

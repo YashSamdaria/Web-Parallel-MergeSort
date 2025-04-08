@@ -1,5 +1,5 @@
 build:
   commands:
-    - chmod +x ../main        # Then set permissions
+    - chmod +x /app/main       # Absolute path permission set
 deploy:
-  start: gunicorn server.app:app  # Run from root directory
+  start: gunicorn server.app:app
