@@ -1,0 +1,5 @@
+build:
+  commands:
+    - chmod +x main  # Ensure the binary is executable
+deploy:
+  start: gunicorn app:app
